@@ -11,31 +11,31 @@ function getHitPoints ($level, $conMod)
     }
     else if($level == 2)
     {
-        $hitDice = 2;
+        $hitDice = 1;
     }
     else if($level == 3 || $level == 4)
     {
-        $hitDice = 3;
+        $hitDice = 2;
     }
     else if($level == 5)
     {
-        $hitDice = 4;
+        $hitDice = 3;
     }
     else if($level == 6)
     {
-        $hitDice = 5;
+        $hitDice = 3;
     }
     else if($level == 7 || $level == 8)
     {
-        $hitDice = 6;
+        $hitDice = 4;
     }
-    else if($level == 9)
+    else if($level == 9 || $level == 10)
     {
-        $hitDice = 7;
+        $hitDice = 5;
     }
     else
     {
-        $hitDice = 8;
+        $hitDice = 6;
     }
     
     
@@ -45,7 +45,7 @@ function getHitPoints ($level, $conMod)
             {
 
                 $hpEachLevel = 0;
-                $hpEachLevel = rand(2, 7) + $conMod;
+                $hpEachLevel = rand(1, 7) + $conMod;
 
                 if($hpEachLevel < 3)
                     {
@@ -55,12 +55,32 @@ function getHitPoints ($level, $conMod)
                 $hitPoints += $hpEachLevel;
             }
 
+    if($level == 2)
+    {
+        $hitPoints += 1;
+    }
+    
     if($level == 4)
     {
         $hitPoints += 1;
     }
     
+    if($level == 6)
+    {
+        $hitPoints += 1;
+    }
+    
     if($level == 8)
+    {
+        $hitPoints += 1;
+    }
+    
+    if($level == 10)
+    {
+        $hitPoints += 1;
+    }
+    
+    if($level == 12)
     {
         $hitPoints += 1;
     }
@@ -79,40 +99,48 @@ function getHitDiceAmount ($level)
         }
     else if($level == 2)
         {
-            $hd = "2";
+            $hd = "1+1";
         }
     else if($level == 3)
         {
-            $hd = "3";
+            $hd = "2";
         }
     else if($level == 4)
         {
-            $hd = "3+1";
+            $hd = "2+1";
         }
     else if($level == 5)
         {
-            $hd = "4";
+            $hd = "3";
         }
     else if($level == 6)
         {
-            $hd = "5";
+            $hd = "3+1";
         }
     else if($level == 7)
         {
-            $hd = "6";
+            $hd = "4";
         }
     else if($level == 8)
         {
-            $hd = "6+1";
+            $hd = "4+1";
         }
     else if($level == 9)
         {
-            $hd = "7";
+            $hd = "5";
         }
     else if($level == 10)
         {
-            $hd = "8";
+            $hd = "5+1";
         }
+        else if($level == 11)
+            {
+                $hd = "6";
+            }
+        else if($level == 12)
+            {
+                $hd = "6+1";
+            }
     
     return $hd;
                 

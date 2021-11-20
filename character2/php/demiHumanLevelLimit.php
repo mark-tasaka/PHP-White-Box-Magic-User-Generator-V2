@@ -18,13 +18,13 @@ function levelLimit ($race, $level)
     }
     else if($race === "Elf")
     {
-        if($level <= 4)
+        if($level <= 8)
         {
             $characterLevel = $level;
         }
         else
         {
-            $characterLevel = 4;
+            $characterLevel = 8;
         }
     }
     else if($race === "Halfling")
