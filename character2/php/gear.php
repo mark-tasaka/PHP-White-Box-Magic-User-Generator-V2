@@ -29,7 +29,7 @@ function getGear($input)
         $a22 = array("Sack (15 lb. capacity)", 10);
         $a23 = array("Sack (30 lb. capacity)", 0);
         $a24 = array("Shovel", 0);
-        $a25 = array("Spellbook (blank)", 1);
+        $a25 = array("Spellbook", 1);
         $a26 = array("Iron Spikes (12)", 10);
         $a27 = array("Wooden Spikes (12)", 5);
         $a28 = array("Tent", 2);

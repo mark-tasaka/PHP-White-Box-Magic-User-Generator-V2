@@ -359,9 +359,9 @@
     
     $dwarfSaveMagic = dwarfSaveMod ($characterRace);
 
-    $wisdomPrime = $wisdom;
+    $intelligencePrime = $intelligence;
 
-    $exBonus = exBonus ($wisdomPrime, $wisdom, $charisma);
+    $exBonus = exBonus ($intelligencePrime, $wisdom, $charisma);
 
     $hirelings = hirelings($charisma);
 
@@ -373,6 +373,7 @@
     $spellLevel3 = spellLevels($level)[2];
     $spellLevel4 = spellLevels($level)[3];
     $spellLevel5 = spellLevels($level)[4];
+    $spellLevel6 = spellLevels($level)[5];
     
     
     $spellsForLevel1 = spellsEachLevel($level)[0];
@@ -380,9 +381,11 @@
     $spellsForLevel3 = spellsEachLevel($level)[2];
     $spellsForLevel4 = spellsEachLevel($level)[3];
     $spellsForLevel5 = spellsEachLevel($level)[4];
+    $spellsForLevel6 = spellsEachLevel($level)[5];
     
+    /*
     $spellLevelTitle = spellHeader1 ($level);
-    $spellNumberTitle = spellHeader2 ($level);
+    $spellNumberTitle = spellHeader2 ($level);*/
 
     
     ?>
@@ -857,14 +860,14 @@
 
        <span id=spellLevelTitle>
            <?php
-           echo $spellLevelTitle;
+           echo 'Level';
            ?>
        </span>
        
        
        <span id=spellNumberTitle>
            <?php
-           echo $spellNumberTitle;
+           echo 'Spells';
            ?>
        </span>
        
@@ -898,6 +901,13 @@
            echo $spellLevel5;
            ?>
        </span>       
+
+       <span id="spellsLevel6">
+           <?php
+           echo $spellLevel6;
+           ?>
+       </span>       
+       
        
        
        
@@ -930,12 +940,18 @@
            echo $spellsForLevel5;
            ?>
        </span>
+       
+       <span id="spellsForLevel6">
+       <?php
+           echo $spellsForLevel6;
+           ?>
+       </span>
 
      
        <span id="spellLine">
        
        <?php
-           echo "___________________________________";
+           echo "________________________________________";
            ?>
        </span>
        

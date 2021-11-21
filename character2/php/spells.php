@@ -1,41 +1,43 @@
 <?php
-/*Cleric Spells*/
+/*Magic-User Spells*/
 
 
 function spellLevels ($level)
 {
     
-    $spells = array("1", "2", "3", "4", "5");
-    
+    $spells = array("1", "2", "3", "4", "5", "6");
+        
     return $spells;
+    
+    
 }
 
 function spellLine ($level)
 {
     
-    $line = "-";
+    $line = "_____";
 
-    if($level >= 2 && $level <=3)
+    if($level >= 3 && $level <=4)
     {
-        $line = "_____";
+        $line = "____________";
     }
-    else if($level ==4)
-    {
-        $line = "_____________";
-    }
-    else if($level ==5)
+    else if($level >= 5 && $level <=6)
     {
         $line = "___________________";
     }
-    else if($level ==6)
+    else if($level >= 7 && $level <=8)
     {
-        $line = "___________________________";
+        $line = "________________________";
     }
-    
-    else if($level >= 7)
+    else if($level >= 9 && $level <=11)
     {
         $line = "_______________________________";
     }
+    else if($level ==12)
+    {
+        $line = "_____________________________________";
+    }
+    
     return $line;
     
 }
@@ -43,70 +45,60 @@ function spellLine ($level)
 
 function spellsEachLevel ($level)
 {
-    $spells = array("-", "-", "-", "-", "-");
+    $spells = array("", "-", "-", "-", "-", "-");
   
-    if($level == 2)
+    if($level == 1)
     {
-            $spells = array("1", "-", "-", "-", "-");   
+            $spells = array("1", "-", "-", "-", "-", "-");   
+    }
+    else if($level == 2)
+    {
+            $spells = array("2", "-", "-", "-", "-", "-");   
     }
     else if($level == 3)
     {
-            $spells = array("2", "-", "-", "-", "-");   
+            $spells = array("3", "1", "-", "-", "-", "-");   
     }
     else if($level == 4)
     {
-            $spells = array("2", "1", "-", "-", "-");   
+            $spells = array("4", "2", "-", "-", "-", "-");   
     }
     else if($level == 5)
     {
-            $spells = array("2", "2", "1", "-", "-");   
+            $spells = array("4", "2", "1", "-", "-", "-");   
     }
     else if($level == 6)
     {
-            $spells = array("2", "2", "1", "1", "-");   
+            $spells = array("4", "2", "2", "-", "-", "-");   
     }
     else if($level == 7)
     {
-            $spells = array("2", "2", "2", "1", "1");   
+            $spells = array("4", "3", "2", "1", "-", "-");   
     }
     else if($level == 8)
     {
-            $spells = array("2", "2", "2", "2", "2");   
+            $spells = array("4", "3", "3", "2", "-", "-");   
     }
     else if($level == 9)
     {
-            $spells = array("3", "3", "3", "2", "2");  
+            $spells = array("4", "3", "3", "2", "1", "-");   
     }
     else if($level == 10)
     {
-            $spells = array("3", "3", "3", "3", "3");  
+            $spells = array("4", "4", "3", "2", "2", "-");   
     }
+    else if($level == 11)
+    {
+            $spells = array("4", "4", "4", "3", "3", "-");   
+    }
+    else if($level == 12)
+    {
+            $spells = array("4", "4", "4", "4", "4", "1");   
+    }
+
+
 
     return $spells;
-}
-
-function spellHeader1 ($level)
-{
-    $header = "-";
-    
-    if($level > 1)
-    {
-        $header = "Spell Lv:";
-    }
-    
-    return $header;
-}
-
-function spellHeader2 ($level)
-{
-    $header = "-";
-    
-    if($level > 1)
-    {
-        $header = "Spells:";
-    }
-    
-    return $header;
 }
 
 
